@@ -20,6 +20,15 @@ public class Main {
         System.out.println(" Имя — " + threePeople.getFirstName());
         System.out.println(" Фамилия — " + threePeople.getLastName());
         System.out.println("Номер паспорта — " + threePeople.getPassportId());
+
+        Person fourPeople = new Person("Pasha", "Volodin");
+
+        System.out.println(" Имя — " + fourPeople.getFirstName());
+        System.out.println(" Фамилия — " + fourPeople.getLastName());
+
+        Person fivePeople = new Person(11548);
+
+        System.out.println("Номер паспорта — " + fivePeople.getPassportId());
     }
 
 }
