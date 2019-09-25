@@ -15,7 +15,7 @@ class Points {
         return new Point(a.x * b.x, a.y * b.y, a.z * b.z);
     }
 
-    static Point divide (Point a,Point b) {
+    static Point divide (Point a, Point b) {
         return new Point(a.x / b.x, a.y / b.y, a.z / b.z);
     }
 
@@ -31,5 +31,11 @@ class Points {
     }
     static Point inverse (Point a) {
         return new Point(1/a.x,1/a.y,1/a.z);
+    }
+    static double scalarProduct (Point a, Point b) {
+        return (a.x*b.x) + (a.y*b.y) + (a.z*b.z);
+    }
+    static Point vectorProduct (Point a, Point b) {
+        return new Point(a.y*b.z - b.y*a.z ,  b.x*a.z - a.x*b.z, a.x*b.y - b.x*a.y);
     }
 }

@@ -17,5 +17,7 @@ class Main {
         System.out.println("Длина первой точки:" + " " + Points.length(k));
         System.out.println("Противоположное значение координат первой точки :" + " " + Points.opposite(k).x + " " + Points.opposite(k).y + " " + Points.opposite(k).z);
         System.out.println("Обратные значения координат второй точки :" + " " + Points.inverse(n).x + " " + Points.inverse(n).y + " " + Points.inverse(n).z);
+        System.out.println("Результат скалярного умножения:" + " " + Points.scalarProduct(k,n));
+        System.out.println("Результат векторного умножения:" + " (" + Points.vectorProduct(k,n).x + " " + Points.vectorProduct(k,n).y + " " + Points.vectorProduct(k,n).z + ")");
     }
 }
