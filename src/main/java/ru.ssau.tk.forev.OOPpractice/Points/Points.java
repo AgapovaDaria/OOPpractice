@@ -18,4 +18,9 @@ class Points {
     static Point divide (Point a,Point b) {
         return new Point(a.x / b.x, a.y / b.y, a.z / b.z);
     }
+
+    static Point enlarge(Point a, double v )  {
+        return new Point (a.x*v, a.y*v,a.z*v);
+
+    }
 }
