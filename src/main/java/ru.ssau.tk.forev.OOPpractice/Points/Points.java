@@ -21,6 +21,9 @@ class Points {
 
     static Point enlarge(Point a, double v )  {
         return new Point (a.x*v, a.y*v,a.z*v);
+    }
 
+    static double length (Point a) {
+        return a.length();
     }
 }
