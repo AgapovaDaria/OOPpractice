@@ -26,4 +26,10 @@ class Points {
     static double length (Point a) {
         return a.length();
     }
+    static Point opposite (Point a) {
+        return new Point(-a.x,-a.y,-a.z);
+    }
+    static Point inverse (Point a) {
+        return new Point(1/a.x,1/a.y,1/a.z);
+    }
 }
