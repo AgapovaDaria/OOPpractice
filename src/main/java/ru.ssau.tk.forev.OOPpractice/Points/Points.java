@@ -1,6 +1,9 @@
 package ru.ssau.tk.forev.OOPpractice.Points;
 
 class Points {
+
+    private static double accuracy = 0.00005;
+
     private Points() {
     }
 
@@ -43,4 +46,11 @@ class Points {
     static Point vectorProduct(Point a, Point b) {
         return new Point(a.y * b.z - b.y * a.z, b.x * a.z - a.x * b.z, a.x * b.y - b.x * a.y);
     }
+
+    private static boolean equalsApproximately(double a, double b) {
+        return Math.abs(a - b) < accuracy ;
+    }
+    static boolean equalsApproximately(Point a, Point b) {
+        return equalsApproximately(a.x, b.x) && equalsApproximately(a.y, b.y) && equalsApproximately(a.z, b.z);
+}
 }
