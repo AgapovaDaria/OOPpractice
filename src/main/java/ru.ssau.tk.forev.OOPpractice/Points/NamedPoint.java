@@ -1,6 +1,8 @@
 package ru.ssau.tk.forev.OOPpractice.Points;
 
-class NamedPoint extends Point {
+import ru.ssau.tk.forev.OOPpractice.Generator.Resettable;
+
+class NamedPoint extends Point implements Resettable {
     private String name;
 
     NamedPoint(double x, double y, double z) {
@@ -23,5 +25,10 @@ class NamedPoint extends Point {
     NamedPoint() {
         super(0, 0, 0);
         this.name = "Origin";
+    }
+
+    @Override
+    public void reset() {
+        name = "Absent";
     }
 }
