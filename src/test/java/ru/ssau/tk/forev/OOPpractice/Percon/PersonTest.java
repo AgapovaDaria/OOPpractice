@@ -73,6 +73,16 @@ public class PersonTest {
         assertEquals(three.getLastName(), "Pit");
         assertEquals(three.getPassportId(), 9510);
     }
+
+    @Test
+    public void testGender() {
+        Person firstHuman = new Person("Damon", "Reeves", 9511);
+        firstHuman.setGender(Gender.MALE);
+        assertEquals(firstHuman.getGender(), Gender.MALE);
+        Person secondHuman = new Person("Lisa", "Barker", 9060);
+        secondHuman.setGender(Gender.FEMALE);
+        assertEquals( secondHuman.getGender(), Gender.FEMALE);
+    }
 }
 
 
