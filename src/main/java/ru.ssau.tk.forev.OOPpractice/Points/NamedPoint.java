@@ -12,11 +12,11 @@ class NamedPoint extends Point {
         this.name = name;
     }
 
-    void setName(String name) {
+     void setName(String name) {
         this.name = name;
     }
 
-    String getName() {
+     String getName() {
         return name;
     }
 
