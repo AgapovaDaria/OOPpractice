@@ -1,4 +1,4 @@
-package ru.ssau.tk.forev.OOPpractice.Percon;
+package ru.ssau.tk.forev.OOPpractice.Person;
 
 import org.testng.annotations.Test;
 import static org.testng.Assert.*;

@@ -1,12 +1,12 @@
-package ru.ssau.tk.forev.OOPpractice.Percon;
+package ru.ssau.tk.forev.OOPpractice.Person;
 
-class Person {
+public class Person {
     private String firstName;
     private String lastName;
     private int passportId;
     private Gender gender;
 
-    Person() {
+    public Person() {
         this.firstName = null;
         this.lastName = null;
         this.passportId = 0;

@@ -1,4 +1,4 @@
-package ru.ssau.tk.forev.OOPpractice.Percon;
+package ru.ssau.tk.forev.OOPpractice.Person;
 
 public class Check {
     /*
