@@ -31,4 +31,14 @@ public class ArrayTest {
         }
         assertEquals(arrayDimension [1],3 , 0.000001);
     }
+
+    @Test
+    public void testArrayFour() {
+        int length = 10;
+        double[] arrayDimension = Array.newArrayFour(length);
+        for (int i = 0; i < length; i++) {
+            assertEquals(arrayDimension [i], 2*length - 2*i, 0.000001);
+        }
+        assertEquals(arrayDimension [9],2 , 0.000001);
+    }
 }
