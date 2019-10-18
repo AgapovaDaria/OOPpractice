@@ -34,4 +34,14 @@ public class Array {
         }
         return arrayDimension;
     }
+
+    static public double[] newArrayFive(int length) {
+        double[] arrayDimension = new double[length];
+        arrayDimension[0] = 0;
+        arrayDimension[1] = 1;
+        for (int i = 2; i < length; i++) {
+            arrayDimension[i] = arrayDimension[i - 1] + arrayDimension[i - 2];
+        }
+        return arrayDimension;
+    }
 }
