@@ -18,4 +18,13 @@ public class Array {
         arrayDimension[length - 1] = 2;
         return arrayDimension;
     }
+
+    static public double[] newArrayThree(int length) {
+        double[] arrayDimension = new double[length];
+        for (int i = 0; i < length; i++) {
+            arrayDimension[i] = 2 * i + 1;
+        }
+        return arrayDimension;
+    }
+
 }
