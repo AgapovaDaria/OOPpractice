@@ -8,4 +8,14 @@ public class Array {
         }
         return arrayDimension;
     }
+
+    static public double[] newArrayTwo(int length) {
+        double[] arrayDimension = new double[length];
+        for (int i = 1; i < length - 1; i++) {
+           arrayDimension[i] = 1;
+        }
+        arrayDimension[0] = 2;
+        arrayDimension[length - 1] = 2;
+        return arrayDimension;
+    }
 }
