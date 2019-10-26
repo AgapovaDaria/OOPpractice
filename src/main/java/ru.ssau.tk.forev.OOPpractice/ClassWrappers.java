@@ -2,42 +2,34 @@ package ru.ssau.tk.forev.OOPpractice;
 
 public class ClassWrappers {
 
-    @Deprecated
     static Integer boxing(int i) {
         return new Integer(i);
     }
 
-    @Deprecated
     static Boolean boxing(boolean b) {
         return new Boolean(b);
     }
 
-    @Deprecated
     static Short boxing (short s) {
         return new Short(s);
     }
 
-    @Deprecated
     static Double boxing (double d) {
         return new Double(d);
     }
 
-    @Deprecated
     static Float boxing (float f) {
         return new Float(f);
     }
 
-    @Deprecated
     static Long boxing (long l){
         return new Long(l);
     }
 
-    @Deprecated
     static Character boxing (char c) {
         return new Character(c);
     }
 
-    @Deprecated
     static Byte boxing (byte byt) {
         return new Byte(byt);
     }
