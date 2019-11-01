@@ -108,4 +108,15 @@ public class ArrayTest {
         assertEquals(arrayDemonstrations[2], 64, 0.00001);
         assertEquals(arrayDemonstrations[3], 512, 0.00001);
     }
+
+    @Test
+    public void testSymmetricalArray() {
+        int[] arrayDemonstrations = Array.symmetricalArray(5);
+        assertEquals(arrayDemonstrations[0], 1, 0.00001);
+        assertEquals(arrayDemonstrations[1], 2, 0.00001);
+        assertEquals(arrayDemonstrations[2], 3, 0.00001);
+        assertEquals(arrayDemonstrations[3], 2, 0.00001);
+        assertEquals(arrayDemonstrations[4], 1, 0.00001);
+    }
+
 }
