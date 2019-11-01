@@ -89,4 +89,14 @@ public class ArrayTest {
         assertEquals(arrayDemonstrations[5],8,0.00001);
         assertEquals(arrayDemonstrations[6],10,0.00001);
     }
+
+    @Test
+    public void testArithmeticProgressionArray(){
+        double[] arrayDemonstrations = Array.arithmeticProgressionArray(5,2,5);
+        assertEquals(arrayDemonstrations[0],2,0.00001);
+        assertEquals(arrayDemonstrations[1],7,0.00001);
+        assertEquals(arrayDemonstrations[2],12,0.00001);
+        assertEquals(arrayDemonstrations[3],17,0.00001);
+        assertEquals(arrayDemonstrations[4],22,0.00001);
+    }
 }

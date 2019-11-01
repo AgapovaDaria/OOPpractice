@@ -86,5 +86,14 @@ public class Array {
         }
         return array;
     }
+
+    static public double[] arithmeticProgressionArray(int length, int a_n, int d) {
+        double[] array = new double[length];
+        array[0] = a_n;
+        for (int i = 1; i < length; i++) {
+            array[i] = array[i - 1] + d;
+        }
+        return array;
+    }
 }
 
