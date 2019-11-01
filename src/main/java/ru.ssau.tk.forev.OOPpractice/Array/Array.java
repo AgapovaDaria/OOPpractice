@@ -87,11 +87,20 @@ public class Array {
         return array;
     }
 
-    static public double[] arithmeticProgressionArray(int length, int a_n, int d) {
+    static public double[] arithmeticProgressionArray(int length, double a_n, double d) {
         double[] array = new double[length];
         array[0] = a_n;
         for (int i = 1; i < length; i++) {
             array[i] = array[i - 1] + d;
+        }
+        return array;
+    }
+
+    static public double[] arrayGeometricProgression(int length, double b_n, double g) {
+        double[] array = new double[length];
+        array[0] = b_n;
+        for (int i = 1; i < length; i++) {
+            array[i] = array[i - 1] * g;
         }
         return array;
     }
