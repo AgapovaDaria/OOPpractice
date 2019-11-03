@@ -121,12 +121,20 @@ public class ArrayTest {
 
     @Test
     public void testArrayOppositeSigns() {
-        double[] array = new double[]{1., 3., 4.,5};
+        double[] array = new double[]{1., 3., 4., 5};
         Array.arrayOppositeSigns(array);
         assertEquals(array[0], -1, 0.0001);
         assertEquals(array[1], -3, 0.0001);
         assertEquals(array[2], -4, 0.0001);
         assertEquals(array[3], -5, 0.0001);
         assertEquals(array.length, 4, 0.0001);
+    }
+
+    @Test
+    public void testCheckContainNumber() {
+        double[] array = new double[]{1., 3., 4., 5};
+        assertFalse(Array.checkContainNumber(array,9));
+        assertTrue(Array.checkContainNumber(array,3));
+        assertFalse(Array.checkContainNumber(array,50));
     }
 }

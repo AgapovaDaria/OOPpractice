@@ -116,9 +116,18 @@ public class Array {
     }
 
     public static void arrayOppositeSigns(double[] array) {
-        for (int i=0; i< array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             array[i] = -array[i];
         }
+    }
+
+    public static boolean checkContainNumber(double[] array, double a) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == a) {
+                return true;
+            }
+        }
+        return false;
     }
 }
 
