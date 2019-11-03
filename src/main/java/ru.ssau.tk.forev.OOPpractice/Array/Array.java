@@ -107,12 +107,18 @@ public class Array {
 
     static public int[] symmetricalArray(int length) {
         int[] array = new int[length];
-        double p = Math.round((double)length / 2);
+        double p = Math.round((double) length / 2);
         for (int i = 0; i < p; i++) {
             array[i] = i + 1;
             array[length - i - 1] = i + 1;
         }
         return array;
+    }
+
+    public static void arrayOppositeSigns(double[] array) {
+        for (int i=0; i< array.length; i++) {
+            array[i] = -array[i];
+        }
     }
 }
 
