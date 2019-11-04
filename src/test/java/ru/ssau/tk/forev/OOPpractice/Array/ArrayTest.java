@@ -133,8 +133,16 @@ public class ArrayTest {
     @Test
     public void testCheckContainNumber() {
         double[] array = new double[]{1., 3., 4., 5};
-        assertFalse(Array.checkContainNumber(array,9));
-        assertTrue(Array.checkContainNumber(array,3));
-        assertFalse(Array.checkContainNumber(array,50));
+        assertFalse(Array.checkContainNumber(array, 9));
+        assertTrue(Array.checkContainNumber(array, 3));
+        assertFalse(Array.checkContainNumber(array, 50));
+    }
+
+    @Test
+    public void testContentsNullArray() {
+        Integer[] array = new Integer[]{5, 10, null};
+        assertTrue(Array.contentsNullArray(array));
+        Integer[] array_2 = new Integer[]{5, 10, 50};
+        assertFalse(Array.contentsNullArray(array_2));
     }
 }
