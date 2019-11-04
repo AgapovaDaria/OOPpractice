@@ -138,6 +138,16 @@ public class Array {
         }
         return false;
     }
+
+    public static int numberOfEvenNumbers(Integer[] array) {
+        int s = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                s++;
+            }
+        }
+        return s;
+    }
 }
 
 

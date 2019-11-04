@@ -145,4 +145,12 @@ public class ArrayTest {
         Integer[] array_2 = new Integer[]{5, 10, 50};
         assertFalse(Array.contentsNullArray(array_2));
     }
+
+    @Test
+    public void testNumberOfEvenNumbers() {
+        Integer[] array = new Integer[]{5, 10, 50, 12, 5, 18, 19, 3};
+        assertEquals(Array.numberOfEvenNumbers(array), 4, 0.00001);
+        Integer[] array_2 = new Integer[]{5, 13, 51, 17, 5, 11, 19, 3, 63};
+        assertEquals(Array.numberOfEvenNumbers(array_2), 0, 0.00001);
+    }
 }
