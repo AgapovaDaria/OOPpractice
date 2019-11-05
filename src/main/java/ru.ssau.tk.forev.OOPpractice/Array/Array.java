@@ -148,6 +148,23 @@ public class Array {
         }
         return s;
     }
+
+    public static boolean dividersFirstAndLast(Integer[] array) {
+        int d = 0;
+        int m = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (i % array[0] == 0) {
+                d++;
+            }
+            if (i % array[array.length - 1] == 0) {
+                m++;
+            }
+        }
+        if (d > m) {
+            return true;
+        }
+        return false;
+    }
 }
 
 

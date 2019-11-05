@@ -142,15 +142,23 @@ public class ArrayTest {
     public void testContentsNullArray() {
         Integer[] array = new Integer[]{5, 10, null};
         assertTrue(Array.contentsNullArray(array));
-        Integer[] array_2 = new Integer[]{5, 10, 50};
-        assertFalse(Array.contentsNullArray(array_2));
+        Integer[] arrayTwo = new Integer[]{5, 10, 50};
+        assertFalse(Array.contentsNullArray(arrayTwo));
     }
 
     @Test
     public void testNumberOfEvenNumbers() {
         Integer[] array = new Integer[]{5, 10, 50, 12, 5, 18, 19, 3};
         assertEquals(Array.numberOfEvenNumbers(array), 4, 0.00001);
-        Integer[] array_2 = new Integer[]{5, 13, 51, 17, 5, 11, 19, 3, 63};
-        assertEquals(Array.numberOfEvenNumbers(array_2), 0, 0.00001);
+        Integer[] arrayTwo = new Integer[]{5, 13, 51, 17, 5, 11, 19, 3, 63};
+        assertEquals(Array.numberOfEvenNumbers(arrayTwo), 0, 0.00001);
+    }
+
+    @Test
+    public void testDividersFirstAndLast() {
+        Integer[] array = new Integer[]{2, 10, 50, 12, 5, 18, 19, 3};
+        assertTrue(Array.dividersFirstAndLast(array));
+        Integer[] arrayTwo = new Integer[]{5, 1, 2, 12, 5, 18, 2};
+        assertFalse(Array.dividersFirstAndLast(arrayTwo));
     }
 }
