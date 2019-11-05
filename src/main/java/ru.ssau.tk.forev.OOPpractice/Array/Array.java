@@ -178,6 +178,22 @@ public class Array {
         }
         return maxValues;
     }
+
+    public static double[] dividers (int a) {
+        double[] array = new double[0];
+        int count = 0;
+        for (int i = 1; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                double[] newArray = new double[array.length + 1];
+                System.arraycopy(array, 0, newArray, 0, array.length);
+                newArray[count] = i;
+                array = newArray;
+                count++;
+            }
+        }
+        return array;
+    }
 }
+
 
 

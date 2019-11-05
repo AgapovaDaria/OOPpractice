@@ -169,4 +169,16 @@ public class ArrayTest {
         Integer[] arrayTwo = new Integer[]{};
         assertNull(Array.maxValuesArray(arrayTwo));
     }
+
+    @Test
+    public void testDividers() {
+        double[] arrayDemonstrations = Array.dividers(10);
+        assertEquals(arrayDemonstrations[0],1, 0.00001);
+        assertEquals(arrayDemonstrations[1],2, 0.00001);
+        assertEquals(arrayDemonstrations.length,2, 0.00001);
+        double[] arrayDemonstrationsTwo = Array.dividers(25);
+        assertEquals(arrayDemonstrationsTwo[0],1, 0.00001);
+        assertEquals(arrayDemonstrationsTwo[1],5, 0.00001);
+        assertEquals(arrayDemonstrationsTwo.length,2, 0.00001);
+    }
 }
