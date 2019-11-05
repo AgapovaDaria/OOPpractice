@@ -165,6 +165,19 @@ public class Array {
         }
         return false;
     }
+
+    public static Integer maxValuesArray(Integer[] array) {
+        if (array.length == 0) {
+            return null;
+        }
+        Integer maxValues = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > maxValues) {
+                maxValues = array[i];
+            }
+        }
+        return maxValues;
+    }
 }
 
 

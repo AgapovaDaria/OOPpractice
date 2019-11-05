@@ -161,4 +161,12 @@ public class ArrayTest {
         Integer[] arrayTwo = new Integer[]{5, 1, 2, 12, 5, 18, 2};
         assertFalse(Array.dividersFirstAndLast(arrayTwo));
     }
+
+    @Test
+    public void testMaxValuesArray() {
+        Integer[] array = new Integer[]{2, 10, 50, 12, 5, 18, 19, 3};
+        assertEquals( Array.maxValuesArray(array), 50, 0.00001);
+        Integer[] arrayTwo = new Integer[]{};
+        assertNull(Array.maxValuesArray(arrayTwo));
+    }
 }
