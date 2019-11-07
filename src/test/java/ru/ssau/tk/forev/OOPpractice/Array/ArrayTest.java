@@ -181,4 +181,21 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsTwo[1],5, 0.00001);
         assertEquals(arrayDemonstrationsTwo.length,2, 0.00001);
     }
+
+    @Test
+    public void testSimpleNumbers() {
+        double[] arrayDemonstrations = Array.simpleNumbers(2);
+        assertEquals(arrayDemonstrations[0],2, 0.00001);
+        assertEquals(arrayDemonstrations.length,1, 0.00001);
+        double[] arrayDemonstrationsTwo = Array.simpleNumbers(3);
+        assertEquals(arrayDemonstrationsTwo[0],2, 0.00001);
+        assertEquals(arrayDemonstrationsTwo[1],3, 0.00001);
+        assertEquals(arrayDemonstrationsTwo.length,2, 0.00001);
+        double[] arrayDemonstrationsThree = Array.simpleNumbers(997);
+        assertEquals(arrayDemonstrationsThree[0],2, 0.00001);
+        assertEquals(arrayDemonstrationsThree[15],53, 0.00001);
+        assertEquals(arrayDemonstrationsThree[16],59, 0.00001);
+        assertEquals(arrayDemonstrationsThree[167],997, 0.00001);
+        assertEquals(arrayDemonstrationsThree.length,168, 0.00001);
+    }
 }

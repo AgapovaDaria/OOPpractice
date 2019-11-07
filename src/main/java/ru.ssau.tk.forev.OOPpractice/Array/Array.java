@@ -179,7 +179,7 @@ public class Array {
         return maxValues;
     }
 
-    public static double[] dividers (int a) {
+    public static double[] dividers(int a) {
         double[] array = new double[0];
         int count = 0;
         for (int i = 1; i <= Math.sqrt(a); i++) {
@@ -189,6 +189,36 @@ public class Array {
                 newArray[count] = i;
                 array = newArray;
                 count++;
+            }
+        }
+        return array;
+    }
+
+    public static double[] dividersTwo(int a) { // вспомогательный метод для поиска всех делителей числа  для задания 2.12
+        double[] array = new double[0];
+        int count = 0;
+        for (int i = 1; i <= a; i++) {
+            if (a % i == 0) {
+                double[] newArray = new double[array.length + 1];
+                System.arraycopy(array, 0, newArray, 0, array.length);
+                newArray[count] = i;
+                array = newArray;
+                count++;
+            }
+        }
+        return array;
+    }
+
+    public static double[] simpleNumbers(int a) {
+        double[] array = new double[0];
+        int count = 0;
+        for (int i = 1; i <= a; i++) {
+            if (Array.dividersTwo(i).length == 2) { // т.к простое число имеет только два делителя это 1 и само число
+                double[] newArray = new double[array.length + 1];
+                System.arraycopy(array, 0, newArray, 0, array.length);
+                newArray[count] = i;
+                array = newArray;
+               count++;
             }
         }
         return array;
