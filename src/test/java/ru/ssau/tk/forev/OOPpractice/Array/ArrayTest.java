@@ -165,7 +165,7 @@ public class ArrayTest {
     @Test
     public void testMaxValuesArray() {
         Integer[] array = new Integer[]{2, 10, 50, 12, 5, 18, 19, 3};
-        assertEquals( Array.maxValuesArray(array), 50, 0.00001);
+        assertEquals(Array.maxValuesArray(array), 50, 0.00001);
         Integer[] arrayTwo = new Integer[]{};
         assertNull(Array.maxValuesArray(arrayTwo));
     }
@@ -173,29 +173,39 @@ public class ArrayTest {
     @Test
     public void testDividers() {
         double[] arrayDemonstrations = Array.dividers(10);
-        assertEquals(arrayDemonstrations[0],1, 0.00001);
-        assertEquals(arrayDemonstrations[1],2, 0.00001);
-        assertEquals(arrayDemonstrations.length,2, 0.00001);
+        assertEquals(arrayDemonstrations[0], 1, 0.00001);
+        assertEquals(arrayDemonstrations[1], 2, 0.00001);
+        assertEquals(arrayDemonstrations.length, 2, 0.00001);
         double[] arrayDemonstrationsTwo = Array.dividers(25);
-        assertEquals(arrayDemonstrationsTwo[0],1, 0.00001);
-        assertEquals(arrayDemonstrationsTwo[1],5, 0.00001);
-        assertEquals(arrayDemonstrationsTwo.length,2, 0.00001);
+        assertEquals(arrayDemonstrationsTwo[0], 1, 0.00001);
+        assertEquals(arrayDemonstrationsTwo[1], 5, 0.00001);
+        assertEquals(arrayDemonstrationsTwo.length, 2, 0.00001);
     }
 
     @Test
     public void testSimpleNumbers() {
         double[] arrayDemonstrations = Array.simpleNumbers(2);
-        assertEquals(arrayDemonstrations[0],2, 0.00001);
-        assertEquals(arrayDemonstrations.length,1, 0.00001);
+        assertEquals(arrayDemonstrations[0], 2, 0.00001);
+        assertEquals(arrayDemonstrations.length, 1, 0.00001);
         double[] arrayDemonstrationsTwo = Array.simpleNumbers(3);
-        assertEquals(arrayDemonstrationsTwo[0],2, 0.00001);
-        assertEquals(arrayDemonstrationsTwo[1],3, 0.00001);
-        assertEquals(arrayDemonstrationsTwo.length,2, 0.00001);
+        assertEquals(arrayDemonstrationsTwo[0], 2, 0.00001);
+        assertEquals(arrayDemonstrationsTwo[1], 3, 0.00001);
+        assertEquals(arrayDemonstrationsTwo.length, 2, 0.00001);
         double[] arrayDemonstrationsThree = Array.simpleNumbers(997);
-        assertEquals(arrayDemonstrationsThree[0],2, 0.00001);
-        assertEquals(arrayDemonstrationsThree[15],53, 0.00001);
-        assertEquals(arrayDemonstrationsThree[16],59, 0.00001);
-        assertEquals(arrayDemonstrationsThree[167],997, 0.00001);
-        assertEquals(arrayDemonstrationsThree.length,168, 0.00001);
+        assertEquals(arrayDemonstrationsThree[0], 2, 0.00001);
+        assertEquals(arrayDemonstrationsThree[15], 53, 0.00001);
+        assertEquals(arrayDemonstrationsThree[16], 59, 0.00001);
+        assertEquals(arrayDemonstrationsThree[167], 997, 0.00001);
+        assertEquals(arrayDemonstrationsThree.length, 168, 0.00001);
+    }
+
+    @Test
+    public void testValueMostOftenInArray() {
+        double[] array = new double[]{2., 10., 10., 10., 5., 18., 19., 3.};
+        assertEquals( Array.valueMostOftenInArray(array), 10, 0.00001);
+        double[] arraySecond = new double[]{2.1, 2.3, 2., 2.1, 2.2, 1.};
+        assertEquals( Array.valueMostOftenInArray(arraySecond), 2.1, 0.00001);
+        double[] arrayThird = new double[]{5, 5, 5};
+        assertEquals( Array.valueMostOftenInArray(arrayThird), 5, 0.00001);
     }
 }
