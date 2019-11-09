@@ -219,4 +219,12 @@ public class ArrayTest {
         assertEquals(Array.indexInputNumber(arrayDemonstrationsSecond, 5), 0, 0.00001);
         assertEquals(Array.indexInputNumber(arrayDemonstrationsSecond, 0), 4, 0.00001);
     }
+
+    @Test
+    public void testSumEvenIndexNumbers() {
+        double[] arrayDemonstrations = new double[]{2., 4., 5.};
+        assertEquals(Array.sumEvenIndexNumbers(arrayDemonstrations), 7., 0.00001);
+        double[] arrayDemonstrationsSecond = new double[]{2., 10., 10., 10., -5., 18., -19., 3.};
+        assertEquals(Array.sumEvenIndexNumbers(arrayDemonstrationsSecond), -12, 0.00001);
+    }
 }

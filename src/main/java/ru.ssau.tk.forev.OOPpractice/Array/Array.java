@@ -253,6 +253,14 @@ public class Array {
         }
         return -1;
     }
+
+    public static double sumEvenIndexNumbers(double[] array) {
+        double sum = 0;
+        for (int i = 0; i < array.length; i += 2) {
+            sum = sum + array[i];
+        }
+        return sum;
+    }
 }
 
 
