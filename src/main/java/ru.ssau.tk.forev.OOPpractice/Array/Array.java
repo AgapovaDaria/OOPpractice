@@ -1,5 +1,7 @@
 package ru.ssau.tk.forev.OOPpractice.Array;
 
+import java.util.stream.IntStream;
+
 public class Array {
     static public double[] newArrayOfTheSameDimension(int length) {
         double[] arrayDimension = new double[length];
@@ -241,6 +243,15 @@ public class Array {
             }
         }
         return mode;
+    }
+
+    public static int indexInputNumber(double[] array, double a) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == a) {
+                return i;
+            }
+        }
+        return -1;
     }
 }
 

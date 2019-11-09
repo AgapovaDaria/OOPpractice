@@ -202,10 +202,21 @@ public class ArrayTest {
     @Test
     public void testValueMostOftenInArray() {
         double[] array = new double[]{2., 10., 10., 10., 5., 18., 19., 3.};
-        assertEquals( Array.valueMostOftenInArray(array), 10, 0.00001);
+        assertEquals(Array.valueMostOftenInArray(array), 10, 0.00001);
         double[] arraySecond = new double[]{2.1, 2.3, 2., 2.1, 2.2, 1.};
-        assertEquals( Array.valueMostOftenInArray(arraySecond), 2.1, 0.00001);
+        assertEquals(Array.valueMostOftenInArray(arraySecond), 2.1, 0.00001);
         double[] arrayThird = new double[]{5, 5, 5};
-        assertEquals( Array.valueMostOftenInArray(arrayThird), 5, 0.00001);
+        assertEquals(Array.valueMostOftenInArray(arrayThird), 5, 0.00001);
+    }
+
+    @Test
+    public void testIndexInputNumber() {
+        double[] arrayDemonstrations = new double[]{2., 10., 10., 10., 5., 18., 19., 3.};
+        assertEquals(Array.indexInputNumber(arrayDemonstrations, 10.), 1, 0.00001);
+        assertEquals(Array.indexInputNumber(arrayDemonstrations, 25.), -1, 0.00001);
+        double[] arrayDemonstrationsSecond = new double[]{5, 6, 10, 18, 0};
+        assertEquals(Array.indexInputNumber(arrayDemonstrationsSecond, 8), -1, 0.00001);
+        assertEquals(Array.indexInputNumber(arrayDemonstrationsSecond, 5), 0, 0.00001);
+        assertEquals(Array.indexInputNumber(arrayDemonstrationsSecond, 0), 4, 0.00001);
     }
 }
