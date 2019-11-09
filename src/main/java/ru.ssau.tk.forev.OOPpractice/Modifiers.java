@@ -45,10 +45,10 @@ final volatile int proInt = 1108; Ошибка: Illegal combination of modifiers
 - ----------------------------------------------------------------------------------------------------------
 -public      -   no   -    no     -    no   -   yes  -  yes  -   yes    -   yes    -     yes      -   yes  -
 -protected   -   no   -    no     -    no   -   yes  -  yes  -   yes    -   yes    -     yes      -   yes  -
--private     -   no   -    no     -    no   -   yes  - ?(no) -   yes    -   yes    -     yes      -   yes  -
--static      -   yes  -    yes    -    yes  -   no   - ?(no) -   no     -   yes    -     yes      -   yes  -
--final       -   yes  -    yes    -   ?(no) -   ?(no)-   no  -   no     -   yes    -     yes      -   yes  -
--abstract    -   yes  -    yes    -    yes  -   no   -   no  -   no     -   no     -     no       -   no   -
+-private     -   no   -    no     -    no   -   yes  -  no -     yes    -   yes    -     yes      -   yes  -
+-static      -   yes  -    yes    -    yes  -   no   -  no -     no     -   yes    -     yes      -   yes  -
+-final       -   yes  -    yes    -    no   -   no-     no  -    no     -   yes    -     yes      -   yes  -
+-abstract    -   yes  -    yes    -    yes  -   no   -  no  -    no     -   no     -     no       -   no   -
 -strictfp    -   yes  -    yes    -    yes  -   yes  -  yes  -   no     -   no     -     yes      -   no   -
 -synchronized-   yes  -    yes    -    yes  -   yes  -  yes  -   no     -   yes    -     no       -   yes  -
 -native      -   yes  -    yes    -    yes  -   yes  -  yes  -   no     -   no     -     yes      -   no   -
