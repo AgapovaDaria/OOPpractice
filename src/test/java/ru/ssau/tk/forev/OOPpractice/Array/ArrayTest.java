@@ -227,4 +227,16 @@ public class ArrayTest {
         double[] arrayDemonstrationsSecond = new double[]{2., 10., 10., 10., -5., 18., -19., 3.};
         assertEquals(Array.sumEvenIndexNumbers(arrayDemonstrationsSecond), -12, 0.00001);
     }
+
+    @Test
+    public void testSwapTheMaximumAndMinimum() {
+        double[] arrayDemonstrations = new double[]{2., 4., 5.};
+        Array.swapTheMaximumAndMinimum(arrayDemonstrations);
+        assertEquals(arrayDemonstrations[0], 5., 0.00001);
+        assertEquals(arrayDemonstrations[2], 2., 0.00001);
+        double[] arrayDemonstrationsSecond = new double[]{2., 10., 10., 10., -5., 18., -19., 3.};
+        Array.swapTheMaximumAndMinimum(arrayDemonstrationsSecond);
+        assertEquals(arrayDemonstrationsSecond[6], 18., 0.00001);
+        assertEquals(arrayDemonstrationsSecond[5], -19., 0.00001);
+    }
 }

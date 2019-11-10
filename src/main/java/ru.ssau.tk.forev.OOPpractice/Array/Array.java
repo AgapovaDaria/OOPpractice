@@ -261,6 +261,25 @@ public class Array {
         }
         return sum;
     }
+
+    public static void swapTheMaximumAndMinimum(double[] array) {
+        double min = Double.MAX_VALUE;
+        double max = Double.MIN_VALUE;
+        int indexMin = 0;
+        int indexMax = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+                indexMin = i;
+            }
+            if (array[i] > max) {
+                max = array[i];
+                indexMax = i;
+            }
+        }
+        array[indexMin]=max;
+        array[indexMax]=min;
+    }
 }
 
 
