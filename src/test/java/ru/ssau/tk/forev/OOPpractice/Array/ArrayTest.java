@@ -239,4 +239,21 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsSecond[6], 18., 0.00001);
         assertEquals(arrayDemonstrationsSecond[5], -19., 0.00001);
     }
+
+    @Test
+    public void testBitwiseNegation() {
+        int[] arrayDemonstrations = new int[]{2, 4, 5};
+        Array.bitwiseNegation(arrayDemonstrations);
+        assertEquals(arrayDemonstrations[0], -3, 0.00001);
+        assertEquals(arrayDemonstrations[1], -5., 0.00001);
+        assertEquals(arrayDemonstrations[2], -6., 0.00001);
+        int[] arrayDemonstrationsSecond = new int[]{15, 8, 16, 20, 6, 1};
+        Array.bitwiseNegation(arrayDemonstrationsSecond);
+        assertEquals(arrayDemonstrationsSecond[0], -16, 0.00001);
+        assertEquals(arrayDemonstrationsSecond[1], -9., 0.00001);
+        assertEquals(arrayDemonstrationsSecond[2], -17., 0.00001);
+        assertEquals(arrayDemonstrationsSecond[3], -21, 0.00001);
+        assertEquals(arrayDemonstrationsSecond[4], -7., 0.00001);
+        assertEquals(arrayDemonstrationsSecond[5], -2., 0.00001);
+    }
 }

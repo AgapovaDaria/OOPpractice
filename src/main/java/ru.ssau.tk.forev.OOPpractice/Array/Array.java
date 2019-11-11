@@ -280,6 +280,12 @@ public class Array {
         array[indexMin]=max;
         array[indexMax]=min;
     }
+
+    public static void bitwiseNegation(int[] array) {
+        for (int i=0; i<array.length; i++) {
+            array[i]= ~array[i];
+        }
+    }
 }
 
 
