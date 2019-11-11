@@ -277,14 +277,23 @@ public class Array {
                 indexMax = i;
             }
         }
-        array[indexMin]=max;
-        array[indexMax]=min;
+        array[indexMin] = max;
+        array[indexMax] = min;
     }
 
     public static void bitwiseNegation(int[] array) {
-        for (int i=0; i<array.length; i++) {
-            array[i]= ~array[i];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = ~array[i];
         }
+    }
+
+    public static int[] newArrayWithBitwiseNegation (int[] array) {
+        int[] denyingArray;
+        denyingArray = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            denyingArray[i] = ~array[i];
+        }
+       return denyingArray;
     }
 }
 

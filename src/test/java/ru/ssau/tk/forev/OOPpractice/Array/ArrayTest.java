@@ -256,4 +256,32 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsSecond[4], -7., 0.00001);
         assertEquals(arrayDemonstrationsSecond[5], -2., 0.00001);
     }
+
+    @Test
+    public void testNewArrayWithBitwiseNegation() {
+        int[] arrayDemonstrations = new int[]{2, 4, 5};
+        int[] denyingArray = new int[arrayDemonstrations.length];
+        denyingArray=Array.newArrayWithBitwiseNegation(arrayDemonstrations);
+        assertEquals(denyingArray[0], -3, 0.00001);
+        assertEquals(denyingArray[1], -5., 0.00001);
+        assertEquals(denyingArray[2], -6., 0.00001);
+        assertEquals(arrayDemonstrations[0], 2, 0.00001);
+        assertEquals(arrayDemonstrations[1], 4., 0.00001);
+        assertEquals(arrayDemonstrations[2], 5, 0.00001);
+        int[] arrayDemonstrationsSecond = new int[]{15, 8, 16, 20, 6, 1};
+        int[] denyingArraySecond = new int[arrayDemonstrationsSecond.length];
+        denyingArraySecond=Array.newArrayWithBitwiseNegation(arrayDemonstrationsSecond);
+        assertEquals(denyingArraySecond[0], -16, 0.00001);
+        assertEquals(denyingArraySecond[1], -9., 0.00001);
+        assertEquals(denyingArraySecond[2], -17., 0.00001);
+        assertEquals(denyingArraySecond[3], -21, 0.00001);
+        assertEquals(denyingArraySecond[4], -7., 0.00001);
+        assertEquals(denyingArraySecond[5], -2., 0.00001);
+        assertEquals(arrayDemonstrationsSecond[0], 15, 0.00001);
+        assertEquals(arrayDemonstrationsSecond[1], 8., 0.00001);
+        assertEquals(arrayDemonstrationsSecond[2], 16, 0.00001);
+        assertEquals(arrayDemonstrationsSecond[3], 20, 0.00001);
+        assertEquals(arrayDemonstrationsSecond[4], 6, 0.00001);
+        assertEquals(arrayDemonstrationsSecond[5], 1, 0.00001);
+    }
 }
