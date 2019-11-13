@@ -284,4 +284,17 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsSecond[4], 6, 0.00001);
         assertEquals(arrayDemonstrationsSecond[5], 1, 0.00001);
     }
+
+    @Test
+    public void testPairwiseSummationOfElements() {
+        int[] arrayDemonstrations = new int[]{9, 1, 5, 5};
+        int[] arrayPairs = Array.pairwiseSummationOfElements(arrayDemonstrations);
+        assertEquals(arrayPairs[0], 10, 0.00001);
+        assertEquals(arrayPairs[1], 10, 0.00001);
+        int[] arrayDemonstrationsSecond = new int[]{1, -8, 10, 8, 6};
+        int[] arrayPairsSecond = Array.pairwiseSummationOfElements(arrayDemonstrationsSecond);
+        assertEquals(arrayPairsSecond[0], -7, 0.00001);
+        assertEquals(arrayPairsSecond[1], 18, 0.00001);
+        assertEquals(arrayPairsSecond[2], 6, 0.00001);
+    }
 }

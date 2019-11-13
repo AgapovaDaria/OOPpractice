@@ -287,13 +287,30 @@ public class Array {
         }
     }
 
-    public static int[] newArrayWithBitwiseNegation (int[] array) {
+    public static int[] newArrayWithBitwiseNegation(int[] array) {
         int[] denyingArray;
         denyingArray = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             denyingArray[i] = ~array[i];
         }
-       return denyingArray;
+        return denyingArray;
+    }
+
+    public static int[] pairwiseSummationOfElements(int[] array) {
+        int[] arrayPairs;
+        if (array.length % 2 == 0) {
+            arrayPairs = new int[array.length / 2];
+            for (int i = 0; i < arrayPairs.length; i++) {
+                arrayPairs[i] = array[2 * i] + array[2 * i + 1];
+            }
+        } else {
+            arrayPairs = new int[array.length / 2 + 1];
+            for (int i = 0; i < arrayPairs.length - 1; i++) {
+                arrayPairs[i] = array[2 * i] + array[2 * i + 1];
+            }
+            arrayPairs[arrayPairs.length - 1] = array[array.length - 1];
+        }
+        return arrayPairs;
     }
 }
 
