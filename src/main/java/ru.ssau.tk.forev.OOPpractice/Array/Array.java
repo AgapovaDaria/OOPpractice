@@ -3,6 +3,7 @@ package ru.ssau.tk.forev.OOPpractice.Array;
 import java.util.stream.IntStream;
 
 public class Array {
+
     static public double[] newArrayOfTheSameDimension(int length) {
         double[] arrayDimension = new double[length];
         for (int i = 0; i < length; i++) {
@@ -311,6 +312,19 @@ public class Array {
             arrayPairs[arrayPairs.length - 1] = array[array.length - 1];
         }
         return arrayPairs;
+    }
+
+    public static boolean[] booleansArray(int[] array) {
+        boolean[] booleansArray;
+        booleansArray = new boolean[array.length];
+        for (int i = 0; i < booleansArray.length; i++) {
+            if (array[i] % 2 == 0) {
+                booleansArray[i] = true;
+            } else {
+                booleansArray[i] = false;
+            }
+        }
+        return booleansArray;
     }
 }
 

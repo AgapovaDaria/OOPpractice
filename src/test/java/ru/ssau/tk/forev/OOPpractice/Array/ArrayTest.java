@@ -261,7 +261,7 @@ public class ArrayTest {
     public void testNewArrayWithBitwiseNegation() {
         int[] arrayDemonstrations = new int[]{2, 4, 5};
         int[] denyingArray = new int[arrayDemonstrations.length];
-        denyingArray=Array.newArrayWithBitwiseNegation(arrayDemonstrations);
+        denyingArray = Array.newArrayWithBitwiseNegation(arrayDemonstrations);
         assertEquals(denyingArray[0], -3, 0.00001);
         assertEquals(denyingArray[1], -5., 0.00001);
         assertEquals(denyingArray[2], -6., 0.00001);
@@ -270,7 +270,7 @@ public class ArrayTest {
         assertEquals(arrayDemonstrations[2], 5, 0.00001);
         int[] arrayDemonstrationsSecond = new int[]{15, 8, 16, 20, 6, 1};
         int[] denyingArraySecond = new int[arrayDemonstrationsSecond.length];
-        denyingArraySecond=Array.newArrayWithBitwiseNegation(arrayDemonstrationsSecond);
+        denyingArraySecond = Array.newArrayWithBitwiseNegation(arrayDemonstrationsSecond);
         assertEquals(denyingArraySecond[0], -16, 0.00001);
         assertEquals(denyingArraySecond[1], -9., 0.00001);
         assertEquals(denyingArraySecond[2], -17., 0.00001);
@@ -296,5 +296,21 @@ public class ArrayTest {
         assertEquals(arrayPairsSecond[0], -7, 0.00001);
         assertEquals(arrayPairsSecond[1], 18, 0.00001);
         assertEquals(arrayPairsSecond[2], 6, 0.00001);
+    }
+
+    @Test
+    public void testBooleansArray() {
+        int[] arrayDemonstrations = new int[]{9, 1, 6, 5};
+        boolean[] booleansArray = Array.booleansArray(arrayDemonstrations);
+        assertFalse(booleansArray[0]);
+        assertFalse(booleansArray[1]);
+        assertTrue(booleansArray[2]);
+        assertFalse(booleansArray[3]);
+        int[] arrayDemonstrationsSecond = new int[]{2, 6, 8, 5};
+        boolean[] booleansArraySecond = Array.booleansArray(arrayDemonstrationsSecond);
+        assertTrue(booleansArraySecond[0]);
+        assertTrue(booleansArraySecond[1]);
+        assertTrue(booleansArraySecond[2]);
+        assertFalse(booleansArraySecond[3]);
     }
 }
