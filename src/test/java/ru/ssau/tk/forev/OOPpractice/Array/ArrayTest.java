@@ -313,4 +313,12 @@ public class ArrayTest {
         assertTrue(booleansArraySecond[2]);
         assertFalse(booleansArraySecond[3]);
     }
+
+    @Test
+    public void testLongInInt () {
+        int[] arrayDemonstrations = Array.longInInt(9223372036854775807L);
+        assertEquals(arrayDemonstrations[0], 2147483647);
+        assertEquals(arrayDemonstrations[1], -1);
+        assertEquals(Array.intInLong(arrayDemonstrations), 9223372036854775807L);
+    }
 }

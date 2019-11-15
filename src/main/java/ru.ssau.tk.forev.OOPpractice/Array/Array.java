@@ -326,6 +326,16 @@ public class Array {
         }
         return booleansArray;
     }
+
+    public static int[] longInInt(long t) {
+        int shift = 32;
+        int a = (int) (t >> shift);
+        int b = (int) t;
+        return new int[]{a, b};
+    }
+    public static long intInLong (int[] array) {
+        return ((long) array[0] << 32) | ((long) array[1] & 4294967295L);
+    }
 }
 
 
