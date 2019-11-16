@@ -321,4 +321,23 @@ public class ArrayTest {
         assertEquals(arrayDemonstrations[1], -1);
         assertEquals(Array.intInLong(arrayDemonstrations), 9223372036854775807L);
     }
+
+    @Test
+    public void testNaturalArrayNumbersWithIndexDefined() {
+        int[] arrayDemonstrations = Array.naturalArrayNumbersWithIndexDefined(5,3);
+        assertEquals(arrayDemonstrations[0], 3);
+        assertEquals(arrayDemonstrations[1], 4);
+        assertEquals(arrayDemonstrations[2], 5);
+        assertEquals(arrayDemonstrations[3], 1);
+        assertEquals(arrayDemonstrations[4], 2);
+       int[] arrayDemonstrationsSecond = Array.naturalArrayNumbersWithIndexDefined(8,3);
+        assertEquals(arrayDemonstrationsSecond[0], 6);
+        assertEquals(arrayDemonstrationsSecond[1], 7);
+        assertEquals(arrayDemonstrationsSecond[2], 8);
+        assertEquals(arrayDemonstrationsSecond[3], 1);
+        assertEquals(arrayDemonstrationsSecond[4], 2);
+        assertEquals(arrayDemonstrationsSecond[5], 3);
+        assertEquals(arrayDemonstrationsSecond[6], 4);
+        assertEquals(arrayDemonstrationsSecond[7], 5);
+    }
 }

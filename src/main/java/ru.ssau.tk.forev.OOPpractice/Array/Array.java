@@ -333,8 +333,21 @@ public class Array {
         int b = (int) t;
         return new int[]{a, b};
     }
-    public static long intInLong (int[] array) {
+
+    public static long intInLong(int[] array) {
         return ((long) array[0] << 32) | ((long) array[1] & 4294967295L);
+    }
+
+    public static int[] naturalArrayNumbersWithIndexDefined (int length, int index) {
+        int[] array = new int[length];
+        for (int i = 0; i < array.length; i++) {
+            if ((i+index)<length) {
+                array[i+index]= i+1;
+            }else {
+                array[i+index-length]=i+1;
+            }
+        }
+        return array;
     }
 }
 
