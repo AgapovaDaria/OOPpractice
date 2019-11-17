@@ -338,13 +338,26 @@ public class Array {
         return ((long) array[0] << 32) | ((long) array[1] & 4294967295L);
     }
 
-    public static int[] naturalArrayNumbersWithIndexDefined (int length, int index) {
+    public static int[] naturalArrayNumbersWithIndexDefined(int length, int index) {
         int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
-            if ((i+index)<length) {
-                array[i+index]= i+1;
-            }else {
-                array[i+index-length]=i+1;
+            if ((i + index) < length) {
+                array[i + index] = i + 1;
+            } else {
+                array[i + index - length] = i + 1;
+            }
+        }
+        return array;
+    }
+
+    public static int[][] twoDimensionalArrayNaturalNumbers(int length) {
+        int[][] array = new int[length][];
+        int g = 1;
+        for (int i = 0; i < length; i++) {
+            array[i] = new int[length - i];
+            for (int j = 0; j < (length - i); j++) {
+                array[i][j] = g;
+                g++;
             }
         }
         return array;

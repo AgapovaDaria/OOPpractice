@@ -315,7 +315,7 @@ public class ArrayTest {
     }
 
     @Test
-    public void testLongInInt () {
+    public void testLongInInt() {
         int[] arrayDemonstrations = Array.longInInt(9223372036854775807L);
         assertEquals(arrayDemonstrations[0], 2147483647);
         assertEquals(arrayDemonstrations[1], -1);
@@ -324,13 +324,13 @@ public class ArrayTest {
 
     @Test
     public void testNaturalArrayNumbersWithIndexDefined() {
-        int[] arrayDemonstrations = Array.naturalArrayNumbersWithIndexDefined(5,3);
+        int[] arrayDemonstrations = Array.naturalArrayNumbersWithIndexDefined(5, 3);
         assertEquals(arrayDemonstrations[0], 3);
         assertEquals(arrayDemonstrations[1], 4);
         assertEquals(arrayDemonstrations[2], 5);
         assertEquals(arrayDemonstrations[3], 1);
         assertEquals(arrayDemonstrations[4], 2);
-       int[] arrayDemonstrationsSecond = Array.naturalArrayNumbersWithIndexDefined(8,3);
+        int[] arrayDemonstrationsSecond = Array.naturalArrayNumbersWithIndexDefined(8, 3);
         assertEquals(arrayDemonstrationsSecond[0], 6);
         assertEquals(arrayDemonstrationsSecond[1], 7);
         assertEquals(arrayDemonstrationsSecond[2], 8);
@@ -339,5 +339,20 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsSecond[5], 3);
         assertEquals(arrayDemonstrationsSecond[6], 4);
         assertEquals(arrayDemonstrationsSecond[7], 5);
+    }
+
+    @Test
+    public void testTwoDimensionalArrayNaturalNumbers() {
+        int[][] arrayDemonstrations = Array.twoDimensionalArrayNaturalNumbers(2);
+        assertEquals(arrayDemonstrations[0][0], 1);
+        assertEquals(arrayDemonstrations[0][1], 2);
+        assertEquals(arrayDemonstrations[1][0], 3);
+        int[][] arrayDemonstrationsSecond = Array.twoDimensionalArrayNaturalNumbers(3);
+        assertEquals(arrayDemonstrationsSecond[0][0], 1);
+        assertEquals(arrayDemonstrationsSecond[0][1], 2);
+        assertEquals(arrayDemonstrationsSecond[0][2], 3);
+        assertEquals(arrayDemonstrationsSecond[1][0], 4);
+        assertEquals(arrayDemonstrationsSecond[1][1], 5);
+        assertEquals(arrayDemonstrationsSecond[2][0], 6);
     }
 }
