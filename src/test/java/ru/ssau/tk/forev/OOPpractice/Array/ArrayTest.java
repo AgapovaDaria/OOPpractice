@@ -355,4 +355,18 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsSecond[1][1], 5);
         assertEquals(arrayDemonstrationsSecond[2][0], 6);
     }
+
+    @Test
+    public static void testNanInArray() {
+        double[] arrayDemonstrations = new double[]{2., 10., 6.};
+        Array.nanInArray(arrayDemonstrations);
+        assertEquals(arrayDemonstrations[0], 2.);
+        assertEquals(arrayDemonstrations[1], 6.);
+        assertEquals(arrayDemonstrations[2], 10.);
+        double[] arrayDemonstrationsSecond = new double[]{2., 10., Double.NaN};
+        Array.nanInArray(arrayDemonstrationsSecond);
+        assertEquals(arrayDemonstrationsSecond[0], 2.);
+        assertEquals(arrayDemonstrationsSecond[1], 10.);
+        assertEquals(arrayDemonstrationsSecond[2], Double.NaN);
+    }
 }
