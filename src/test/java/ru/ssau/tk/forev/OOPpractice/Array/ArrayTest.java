@@ -375,4 +375,16 @@ public class ArrayTest {
         String[] arrayDemonstrations = new String[]{"Жизнь", "Родители", "Любовь", "Работа"};
         Array.srtArray(arrayDemonstrations);
     }
+
+    @Test
+    public static void testMultiplyingAllNumbers() {
+        double[] arrayDemonstrations = new double[]{2., 10., 6.};
+        assertEquals(Array.multiplyingAllNumbers(arrayDemonstrations), 120.0);
+        double[] arrayDemonstrationsSecond = new double[]{2., 10., 6., 0, 10.};
+        assertEquals(Array.multiplyingAllNumbers(arrayDemonstrationsSecond), 1200.0);
+        double[] arrayDemonstrationsThird = new double[]{2., 10., Double.NaN};
+        assertEquals(Array.multiplyingAllNumbers(arrayDemonstrationsThird), 20.);
+        double[] arrayDemonstrationsFour = new double[]{2., 20., Double.POSITIVE_INFINITY};
+        assertEquals(Array.multiplyingAllNumbers(arrayDemonstrationsFour), 40.);
+    }
 }

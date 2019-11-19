@@ -378,6 +378,17 @@ public class Array {
             System.out.print(array[i] + "\n");
         }
     }
+
+    public static double multiplyingAllNumbers(double[] array) {
+        double outcome = 1;
+        for (int i = 0; i < array.length; i++) {
+            if (Double.isNaN(array[i]) || array[i] == Double.POSITIVE_INFINITY || array[i] == 0) {
+                continue;
+            }
+            outcome *= array[i];
+        }
+        return outcome;
+    }
 }
 
 
