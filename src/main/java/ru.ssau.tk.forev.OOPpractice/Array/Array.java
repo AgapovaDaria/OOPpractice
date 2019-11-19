@@ -372,6 +372,12 @@ public class Array {
             }
         }
     }
+
+    public static void srtArray(String[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + "\n");
+        }
+    }
 }
 
 

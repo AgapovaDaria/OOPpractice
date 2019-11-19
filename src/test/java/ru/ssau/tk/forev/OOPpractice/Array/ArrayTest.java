@@ -369,4 +369,10 @@ public class ArrayTest {
         assertEquals(arrayDemonstrationsSecond[1], 10.);
         assertEquals(arrayDemonstrationsSecond[2], Double.NaN);
     }
+
+    @Test
+    public static void testSrtArray() {
+        String[] arrayDemonstrations = new String[]{"Жизнь", "Родители", "Любовь", "Работа"};
+        Array.srtArray(arrayDemonstrations);
+    }
 }
