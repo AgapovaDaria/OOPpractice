@@ -2,6 +2,8 @@ package ru.ssau.tk.forev.OOPpractice.Array;
 
 import org.testng.annotations.Test;
 
+import java.util.Collection;
+
 import static org.testng.Assert.*;
 
 public class ArrayTest {
@@ -386,5 +388,14 @@ public class ArrayTest {
         assertEquals(Array.multiplyingAllNumbers(arrayDemonstrationsThird), 20.);
         double[] arrayDemonstrationsFour = new double[]{2., 20., Double.POSITIVE_INFINITY};
         assertEquals(Array.multiplyingAllNumbers(arrayDemonstrationsFour), 40.);
+    }
+
+    @Test
+    public void testToHexString() {
+        int[] arrayDemonstrations = new int[]{60, 101, 5, 15, 80};
+        Collection<String> hexStringArray = Array.toHexString(arrayDemonstrations);
+        for (String hexString : hexStringArray) {
+            System.out.println(hexString);
+        }
     }
 }

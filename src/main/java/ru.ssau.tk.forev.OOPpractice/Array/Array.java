@@ -1,5 +1,7 @@
 package ru.ssau.tk.forev.OOPpractice.Array;
 
+import java.util.Collection;
+import java.util.LinkedList;
 import java.util.stream.IntStream;
 
 public class Array {
@@ -388,6 +390,12 @@ public class Array {
             outcome *= array[i];
         }
         return outcome;
+    }
+
+    static Collection<String> toHexString(int[] array) {
+        Collection<String> hexStringArray = new LinkedList<>();
+        java.util.Arrays.stream(array).forEach(value -> hexStringArray.add(Integer.toHexString(value)));
+        return hexStringArray;
     }
 }
 
