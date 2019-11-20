@@ -2,7 +2,7 @@ package ru.ssau.tk.forev.OOPpractice.Array;
 
 import java.util.Collection;
 import java.util.LinkedList;
-import java.util.stream.IntStream;
+
 
 public class Array {
 
