@@ -22,4 +22,14 @@ public class StringsTest {
         Strings.bytesArray(string);
         Strings.bytesArray(secondString);
     }
+
+    @Test
+    public void testPalindrome() {
+        String string = "казак";
+        assertTrue(Strings.palindrome(string));
+        String secondString = "жизнь";
+        assertFalse(Strings.palindrome(secondString));
+        String thirdString = "топот";
+        assertTrue(Strings.palindrome(thirdString));
+    }
 }

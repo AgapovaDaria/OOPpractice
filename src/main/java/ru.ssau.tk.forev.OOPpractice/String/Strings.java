@@ -27,4 +27,13 @@ public class Strings {
         System.out.println(string == secondString);//выводит false,потому что оператор == сравнивает не свойства объектов, а ссылки.Т.е string и secondString указывают на два разных объекта.
         System.out.println(string.equals(secondString));//вывод true, т.к эти строки имеют одно и тоже же значение. Метод equals сравнивает значения.
     }
+
+    public static boolean palindrome(String string) {
+        for (int i = 0; i < string.length(); i++) {
+            if (string.charAt(i) != string.charAt(string.length() - i - 1)) {
+                return false;
+            }
+        }
+        return true;
+    }
 }
