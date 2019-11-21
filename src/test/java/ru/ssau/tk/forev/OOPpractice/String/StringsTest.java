@@ -14,4 +14,12 @@ public class StringsTest {
             System.out.println(chars[i]);
         }
     }
+
+    @Test
+    public void testBytesArray() {
+        String string = "В жизни нет ничего лучше собственного опыта.";
+        String SecondString = "Everything that suddenly changes our lives is not an accident";
+        Strings.bytesArray(string);
+        Strings.bytesArray(SecondString);
+    }
 }

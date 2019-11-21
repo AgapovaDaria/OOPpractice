@@ -10,4 +10,10 @@ public class Strings {
         return charactersString;
     }
 
+    public static void bytesArray(String string) {
+        byte[] byteString = string.getBytes();
+        for (int i = 0; i < string.length(); i++) {
+            System.out.println(byteString[i]);
+        }
+    }
 }
