@@ -1,5 +1,7 @@
 package ru.ssau.tk.forev.OOPpractice.String;
 
+import java.util.Objects;
+
 public class Strings {
 
     public static void main(String[] args) {
@@ -35,5 +37,12 @@ public class Strings {
             }
         }
         return true;
+    }
+
+    public static boolean stringComparisonAndCaseSensitive(String firstString, String secondString) {
+        if (!Objects.equals(null, secondString) && !Objects.equals(firstString, null) && !firstString.equals(secondString) && firstString.equalsIgnoreCase(secondString)) {
+            return true;
+        }
+        return false;
     }
 }

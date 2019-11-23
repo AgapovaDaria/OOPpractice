@@ -32,4 +32,19 @@ public class StringsTest {
         String thirdString = "топот";
         assertTrue(Strings.palindrome(thirdString));
     }
+
+    @Test
+    public void testStringComparisonAndCaseSensitive() {
+        String firstString = "работа";
+        String secondString = "РАБОТА";
+        String thirdString = "работа";
+        String fourString = "отдых";
+        String fiveString = "ОТДЫХ";
+        assertTrue(Strings.stringComparisonAndCaseSensitive(firstString, secondString));
+        assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, thirdString));
+        assertFalse(Strings.stringComparisonAndCaseSensitive(null, secondString));
+        assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, null));
+        assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, fourString));
+        assertTrue(Strings.stringComparisonAndCaseSensitive(fourString,fiveString));
+    }
 }
