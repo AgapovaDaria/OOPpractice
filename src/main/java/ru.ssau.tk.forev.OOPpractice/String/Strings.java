@@ -60,4 +60,8 @@ public class Strings {
         //System.out.println("Символ\№" + ++i); illegal escape character in string literal
         //System.out.println("Символ\t  №" + ++i);//Символ   8 - решила просто проверить, что он отступит вправо на 3 позиции
     }
+
+    public static int indexOccurrenceOfSecondRowInFirst(String firstString, String secondString) {
+        return firstString.indexOf(secondString);
+    }
 }

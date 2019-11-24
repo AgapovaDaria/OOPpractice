@@ -45,6 +45,19 @@ public class StringsTest {
         assertFalse(Strings.stringComparisonAndCaseSensitive(null, secondString));
         assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, null));
         assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, fourString));
-        assertTrue(Strings.stringComparisonAndCaseSensitive(fourString,fiveString));
+        assertTrue(Strings.stringComparisonAndCaseSensitive(fourString, fiveString));
+    }
+
+    @Test
+    public void testIndexOccurrenceOfSecondRowInFirst() {
+        String firstString = "Ставьте перед собой большие цели – по ним тяжелее промазать";
+        String secondString = "цели";
+        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, secondString), 28);
+        String thirdString = "Ставьте";
+        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, thirdString), 0);
+        String fourString = "мир";
+        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, fourString), -1);
+        String fiveString = "cтавьте";
+        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, fiveString), -1);
     }
 }
