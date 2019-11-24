@@ -64,4 +64,8 @@ public class Strings {
     public static int indexOccurrenceOfSecondRowInFirst(String firstString, String secondString) {
         return firstString.indexOf(secondString);
     }
+
+    public static int indexOccurrenceOfSecondLineInSecondHalfOfFirst(String firstString, String secondString) {
+        return firstString.indexOf(secondString, firstString.length() / 2);
+    }
 }

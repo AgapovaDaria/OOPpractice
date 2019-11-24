@@ -60,4 +60,19 @@ public class StringsTest {
         String fiveString = "cтавьте";
         assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, fiveString), -1);
     }
+
+    @Test
+    public void testIndexOccurrenceOfSecondLineInSecondHalfOfFirst() {
+        String firstString = "шиншила";
+        String secondString = "ши";
+        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(firstString, secondString), 3);
+        String thirdString = "до-до-до";
+        String fourString = "до";
+        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(thirdString, fourString), 6);
+        String fiveString = "ка";
+        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(thirdString, fiveString), -1);
+        String sixString = "оратор";
+        String sevenString = "ор";
+        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(sixString, sevenString), 4);
+    }
 }
