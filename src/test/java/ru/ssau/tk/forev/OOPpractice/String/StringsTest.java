@@ -7,72 +7,72 @@ import org.testng.annotations.Test;
 public class StringsTest {
 
     @Test
-    public void testCharactersString() {
+    public void testOutputEachCharacterString() {
         String string = "Когда человеку кажется, что всё идёт наперекосяк, в его жизнь пытается войти нечто чудесное.";
-        char[] chars = Strings.charactersString(string);
+        char[] chars = Strings.outputEachCharacterString(string);
         for (int i = 0; i < chars.length; i++) {
             System.out.println(chars[i]);
         }
     }
 
     @Test
-    public void testBytesArray() {
+    public void testGetByteArrayAndOutput() {
         String string = "В жизни нет ничего лучше собственного опыта.";
         String secondString = "Everything that suddenly changes our lives is not an accident";
-        Strings.bytesArray(string);
-        Strings.bytesArray(secondString);
+        Strings.getByteArrayAndOutput(string);
+        Strings.getByteArrayAndOutput(secondString);
     }
 
     @Test
-    public void testPalindrome() {
+    public void testReturnValueIsPalindrome() {
         String string = "казак";
-        assertTrue(Strings.palindrome(string));
+        assertTrue(Strings.returnValueIsPalindrome(string));
         String secondString = "жизнь";
-        assertFalse(Strings.palindrome(secondString));
+        assertFalse(Strings.returnValueIsPalindrome(secondString));
         String thirdString = "топот";
-        assertTrue(Strings.palindrome(thirdString));
+        assertTrue(Strings.returnValueIsPalindrome(thirdString));
     }
 
     @Test
-    public void testStringComparisonAndCaseSensitive() {
+    public void testCompareContentsOfStrings() {
         String firstString = "работа";
         String secondString = "РАБОТА";
         String thirdString = "работа";
         String fourString = "отдых";
         String fiveString = "ОТДЫХ";
-        assertTrue(Strings.stringComparisonAndCaseSensitive(firstString, secondString));
-        assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, thirdString));
-        assertFalse(Strings.stringComparisonAndCaseSensitive(null, secondString));
-        assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, null));
-        assertFalse(Strings.stringComparisonAndCaseSensitive(firstString, fourString));
-        assertTrue(Strings.stringComparisonAndCaseSensitive(fourString, fiveString));
+        assertTrue(Strings.compareContentsOfStrings(firstString, secondString));
+        assertFalse(Strings.compareContentsOfStrings(firstString, thirdString));
+        assertFalse(Strings.compareContentsOfStrings(null, secondString));
+        assertFalse(Strings.compareContentsOfStrings(firstString, null));
+        assertFalse(Strings.compareContentsOfStrings(firstString, fourString));
+        assertTrue(Strings.compareContentsOfStrings(fourString, fiveString));
     }
 
     @Test
-    public void testIndexOccurrenceOfSecondRowInFirst() {
+    public void testReturnCharacterIndexFirstLineBeginningSecond() {
         String firstString = "Ставьте перед собой большие цели – по ним тяжелее промазать";
         String secondString = "цели";
-        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, secondString), 28);
+        assertEquals(Strings.returnCharacterIndexFirstLineBeginningSecond(firstString, secondString), 28);
         String thirdString = "Ставьте";
-        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, thirdString), 0);
+        assertEquals(Strings.returnCharacterIndexFirstLineBeginningSecond(firstString, thirdString), 0);
         String fourString = "мир";
-        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, fourString), -1);
+        assertEquals(Strings.returnCharacterIndexFirstLineBeginningSecond(firstString, fourString), -1);
         String fiveString = "cтавьте";
-        assertEquals(Strings.indexOccurrenceOfSecondRowInFirst(firstString, fiveString), -1);
+        assertEquals(Strings.returnCharacterIndexFirstLineBeginningSecond(firstString, fiveString), -1);
     }
 
     @Test
-    public void testIndexOccurrenceOfSecondLineInSecondHalfOfFirst() {
+    public void testReturnsIndexValueSecondRowInSecondHalfFirstRow() {
         String firstString = "шиншила";
         String secondString = "ши";
-        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(firstString, secondString), 3);
+        assertEquals(Strings.returnsIndexValueSecondRowInSecondHalfFirstRow(firstString, secondString), 3);
         String thirdString = "до-до-до";
         String fourString = "до";
-        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(thirdString, fourString), 6);
+        assertEquals(Strings.returnsIndexValueSecondRowInSecondHalfFirstRow(thirdString, fourString), 6);
         String fiveString = "ка";
-        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(thirdString, fiveString), -1);
+        assertEquals(Strings.returnsIndexValueSecondRowInSecondHalfFirstRow(thirdString, fiveString), -1);
         String sixString = "оратор";
         String sevenString = "ор";
-        assertEquals(Strings.indexOccurrenceOfSecondLineInSecondHalfOfFirst(sixString, sevenString), 4);
+        assertEquals(Strings.returnsIndexValueSecondRowInSecondHalfFirstRow(sixString, sevenString), 4);
     }
 }
