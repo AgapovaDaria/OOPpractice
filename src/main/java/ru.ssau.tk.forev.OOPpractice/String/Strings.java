@@ -70,6 +70,16 @@ public class Strings {
     }
 
     public static int returnsIndexValueLastOccurrenceSecondString(String firstString, String secondString) {
-        return firstString.lastIndexOf(secondString,firstString.length()/2);
+        return firstString.lastIndexOf(secondString, firstString.length() / 2);
+    }
+
+    public static int toReturnQuantityOfLines(String[] arrayStrings, String prefix, String postfix) {
+        int l = 0;
+        for (int i = 0; i < arrayStrings.length; i++) {
+            if (arrayStrings[i].startsWith(prefix) && arrayStrings[i].endsWith(postfix)) {
+                l++;
+            }
+        }
+        return l;
     }
 }

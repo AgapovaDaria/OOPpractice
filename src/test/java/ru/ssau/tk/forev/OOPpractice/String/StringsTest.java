@@ -87,4 +87,10 @@ public class StringsTest {
         assertEquals(Strings.returnsIndexValueLastOccurrenceSecondString(thirdString, fourString), 3);
         assertEquals(Strings.returnsIndexValueLastOccurrenceSecondString(thirdString, fiveString), -1);
     }
+
+    @Test
+    public void testToReturnQuantityOfLines() {
+        assertEquals(Strings.toReturnQuantityOfLines(new String[]{"abpcd", "ablcd", "abucd","abccd"}, "ab", "cd"), 4);
+        assertEquals(Strings.toReturnQuantityOfLines(new String[]{"abkdi", "abbdi", "absdi", "abfdi"}, "ab", "di"), 4);
+    }
 }
