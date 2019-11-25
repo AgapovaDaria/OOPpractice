@@ -68,4 +68,8 @@ public class Strings {
     public static int returnsIndexValueSecondRowInSecondHalfFirstRow(String firstString, String secondString) {
         return firstString.indexOf(secondString, firstString.length() / 2);
     }
+
+    public static int returnsIndexValueLastOccurrenceSecondString(String firstString, String secondString) {
+        return firstString.lastIndexOf(secondString,firstString.length()/2);
+    }
 }

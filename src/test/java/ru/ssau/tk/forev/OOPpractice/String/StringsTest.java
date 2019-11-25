@@ -75,4 +75,16 @@ public class StringsTest {
         String sevenString = "ор";
         assertEquals(Strings.returnsIndexValueSecondRowInSecondHalfFirstRow(sixString, sevenString), 4);
     }
+
+    @Test
+    public void testReturnsIndexValueLastOccurrenceSecondString() {
+        String firstString = "оратор";
+        String secondString = "ор";
+        assertEquals(Strings.returnsIndexValueLastOccurrenceSecondString(firstString, secondString), 0);
+        String thirdString = "до-до-до-до";
+        String fourString = "до";
+        String fiveString = "ка";
+        assertEquals(Strings.returnsIndexValueLastOccurrenceSecondString(thirdString, fourString), 3);
+        assertEquals(Strings.returnsIndexValueLastOccurrenceSecondString(thirdString, fiveString), -1);
+    }
 }
