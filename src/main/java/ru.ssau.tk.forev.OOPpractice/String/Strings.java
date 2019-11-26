@@ -82,4 +82,14 @@ public class Strings {
         }
         return l;
     }
+
+    public static int returnNumberOfRowsIgnoringSpaceCharacters(String[] arrayStrings, String prefix, String postfix) {
+        int l = 0;
+        for (int i = 0; i < arrayStrings.length; i++) {
+            if (arrayStrings[i].trim().startsWith(prefix) && arrayStrings[i].trim().endsWith(postfix)) {
+                l++;
+            }
+        }
+        return l;
+    }
 }

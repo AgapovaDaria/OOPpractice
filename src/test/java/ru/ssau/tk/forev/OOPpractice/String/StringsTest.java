@@ -93,4 +93,10 @@ public class StringsTest {
         assertEquals(Strings.toReturnQuantityOfLines(new String[]{"abpcd", "ablcd", "abucd","abccd"}, "ab", "cd"), 4);
         assertEquals(Strings.toReturnQuantityOfLines(new String[]{"abkdi", "abbdi", "absdi", "abfdi"}, "ab", "di"), 4);
     }
+
+    @Test
+    public void testReturnNumberOfRowsIgnoringSpaceCharacters() {
+        assertEquals(Strings.returnNumberOfRowsIgnoringSpaceCharacters(new String[]{" abpcd ", " ablcd ", " abucd "," abccd "}, "ab", "cd"), 4);
+        assertEquals(Strings.returnNumberOfRowsIgnoringSpaceCharacters(new String[]{" abkdi", " abbdi", " absdi", " abfdi"}, "ab", "di"), 4);
+    }
 }
