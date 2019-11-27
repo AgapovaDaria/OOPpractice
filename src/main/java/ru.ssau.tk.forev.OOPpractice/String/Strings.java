@@ -92,4 +92,11 @@ public class Strings {
         }
         return l;
     }
+
+    public static String replaceAllInFirstString(String string, String regex, String replacement) {
+        for (int i = 0; i < 100 && string.contains(regex); i++) {
+                string = string.replaceAll(regex, replacement);
+            }
+        return string;
+    }
 }
