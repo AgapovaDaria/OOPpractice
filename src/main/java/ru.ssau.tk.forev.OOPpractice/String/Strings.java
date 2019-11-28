@@ -95,8 +95,20 @@ public class Strings {
 
     public static String replaceAllInFirstString(String string, String regex, String replacement) {
         for (int i = 0; i < 100 && string.contains(regex); i++) {
-                string = string.replaceAll(regex, replacement);
-            }
+            string = string.replaceAll(regex, replacement);
+        }
         return string;
+    }
+
+    public static String getSubstring(String string, int from, int to) {
+        if (from < 0) {
+            from = 0;
+        } else if (to > string.length()) {
+            to = string.length();
+        }
+        if (to <= from) {
+            return "";
+        }
+        return string.substring(from, to);
     }
 }

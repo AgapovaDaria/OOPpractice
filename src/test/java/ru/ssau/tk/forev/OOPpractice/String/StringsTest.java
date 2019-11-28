@@ -105,4 +105,13 @@ public class StringsTest {
         assertEquals(Strings.replaceAllInFirstString("ороророро", "оро", "ро"), "роррро");
         assertEquals(Strings.replaceAllInFirstString("спать, спать, спать нужно постоянно", "спать", "работать"), "работать, работать, работать нужно постоянно");
     }
+
+    @Test
+    public void testGetSubstring() {
+        String string = "abpcd";
+        assertEquals(Strings.getSubstring(string, -5, 5), string.substring(0, 5));
+        assertEquals(Strings.getSubstring(string, 1, 6), string.substring(1, 5));
+        assertEquals(Strings.getSubstring(string, 1, 1), "");
+        assertEquals(Strings.getSubstring(string, 1, 3), "bp");
+    }
 }
