@@ -1,6 +1,7 @@
 package ru.ssau.tk.forev.OOPpractice.Person;
 
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.*;
 
 public class PersonTest {
@@ -81,7 +82,15 @@ public class PersonTest {
         assertEquals(firstHuman.getGender(), Gender.MALE);
         Person secondHuman = new Person("Lisa", "Barker", 9060);
         secondHuman.setGender(Gender.FEMALE);
-        assertEquals( secondHuman.getGender(), Gender.FEMALE);
+        assertEquals(secondHuman.getGender(), Gender.FEMALE);
+    }
+
+    @Test
+    public void testToString() {
+        Person firstHuman = new Person("Peter", "Pearson");
+        assertEquals(firstHuman.toString(), "Peter Pearson");
+        Person secondHuman = new Person("Mildred", "Bell");
+        assertEquals(secondHuman.toString(), "Mildred Bell");
     }
 }
 
