@@ -1,8 +1,12 @@
 package ru.ssau.tk.forev.OOPpractice.String;
 
 import static org.testng.Assert.*;
+import static ru.ssau.tk.forev.OOPpractice.String.Strings.printsStringInputObjectToConsole;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.forev.OOPpractice.Person.Person;
+import ru.ssau.tk.forev.OOPpractice.Points.NamedPoint;
+import ru.ssau.tk.forev.OOPpractice.Points.Point;
 
 public class StringsTest {
 
@@ -113,5 +117,12 @@ public class StringsTest {
         assertEquals(Strings.getSubstring(string, 1, 6), string.substring(1, 5));
         assertEquals(Strings.getSubstring(string, 1, 1), "");
         assertEquals(Strings.getSubstring(string, 1, 3), "bp");
+    }
+
+    @Test
+    public void testPrintsStringInputObjectToConsole() {
+        printsStringInputObjectToConsole(new Person("James", "Hawkins"));
+        printsStringInputObjectToConsole(new Point(2,3,7));
+        printsStringInputObjectToConsole(new NamedPoint(8, 1, 10, "First"));
     }
 }
