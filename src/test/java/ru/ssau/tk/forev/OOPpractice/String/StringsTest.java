@@ -4,6 +4,7 @@ import static org.testng.Assert.*;
 import static ru.ssau.tk.forev.OOPpractice.String.Strings.printsStringInputObjectToConsole;
 
 import org.testng.annotations.Test;
+import ru.ssau.tk.forev.OOPpractice.Matrix_2_31.Matrix;
 import ru.ssau.tk.forev.OOPpractice.Person.Person;
 import ru.ssau.tk.forev.OOPpractice.Points.NamedPoint;
 import ru.ssau.tk.forev.OOPpractice.Points.Point;
@@ -124,5 +125,11 @@ public class StringsTest {
         printsStringInputObjectToConsole(new Person("James", "Hawkins"));
         printsStringInputObjectToConsole(new Point(2,3,7));
         printsStringInputObjectToConsole(new NamedPoint(8, 1, 10, "First"));
+        Matrix firstMatrix = new Matrix(2, 2);
+        firstMatrix.setAt(1, 1, 10);
+        firstMatrix.setAt(1, 2, 10);
+        firstMatrix.setAt(2, 1, 10);
+        firstMatrix.setAt(2, 2, 10);
+        printsStringInputObjectToConsole(firstMatrix);
     }
 }
