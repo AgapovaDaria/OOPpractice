@@ -1,7 +1,7 @@
 package ru.ssau.tk.forev.OOPpractice.Matrix_2_31;
 
+
 public class Matrix {
-    ;
     private double[][] matrix;
     private final int rows;
     private final int columns;
@@ -38,5 +38,20 @@ public class Matrix {
 
     double getAt(int n, int m) {
         return matrix[n - 1][m - 1];
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder auxiliaryString = new StringBuilder();
+        StringBuilder stringOutput = new StringBuilder();
+        for (double[] rows : matrix) {
+            for (double a : rows) {
+                auxiliaryString.append(a + ",");
+            }
+            auxiliaryString.replace(auxiliaryString.length() - 1, auxiliaryString.length(), "");
+            stringOutput.append(auxiliaryString.toString() + ";\n");
+            auxiliaryString = new StringBuilder("");
+        }
+        return stringOutput.toString();
     }
 }
