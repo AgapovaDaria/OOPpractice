@@ -132,4 +132,24 @@ public class StringsTest {
         firstMatrix.setAt(2, 2, 10);
         printsStringInputObjectToConsole(firstMatrix);
     }
+
+    @Test
+    public void testSplitStringBySpaceCharacter() {
+        String string = "мы потому не говорим, что думаем в режиме  умолчания";
+        String[] arrayString = Strings.splitStringBySpaceCharacter(string);
+        assertEquals(arrayString[0],"Мы");
+        assertEquals(arrayString[1],"Потому");
+        assertEquals(arrayString[2],"Не");
+        assertEquals(arrayString[3],"Говорим,");
+        assertEquals(arrayString[4],"Что");
+        assertEquals(arrayString[5],"Думаем");
+        assertEquals(arrayString[6],"В");
+        assertEquals(arrayString[7],"Режиме");
+        assertEquals(arrayString[8],"");
+        String secondString = "если вы что-то боитесь сделать в жизни, то это как раз и есть то, что вам необходимо сделать в первую очередь.";
+        String[] secondArrayString = Strings.splitStringBySpaceCharacter(secondString);
+        for (String a : secondArrayString) {
+            System.out.println(a);
+        }
+    }
 }

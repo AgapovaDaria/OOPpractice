@@ -115,4 +115,14 @@ public class Strings {
     public static void printsStringInputObjectToConsole(Object object) {
         System.out.println("Описание объекта: " + object);
     }
+
+    public static String[] splitStringBySpaceCharacter(String string) {
+        String[] newString = string.split(" ");
+        for (int i = 0; i < newString.length; i++) {
+            if (!newString[i].isEmpty()) {
+                newString[i] = newString[i].substring(0, 1).toUpperCase() + newString[i].substring(1);
+            }
+        }
+        return newString;
+    }
 }
