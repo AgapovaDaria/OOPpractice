@@ -125,4 +125,8 @@ public class Strings {
         }
         return newString;
     }
+
+    public static String unionInRow(String[] string) {
+        return String.join(", ", string);
+    }
 }
