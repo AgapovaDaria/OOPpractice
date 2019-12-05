@@ -129,4 +129,14 @@ public class Strings {
     public static String unionInRow(String[] string) {
         return String.join(", ", string);
     }
+
+    public static String replaceEveryEvenCharacterAndFlipString(String string) {
+        StringBuilder builder = new StringBuilder(string);
+        for (int i = 0; i < string.length(); i++) {
+            if (i % 2 == 0) {
+                builder.replace(i, i + 1, Integer.toString(i));
+            }
+        }
+        return builder.reverse().toString();
+    }
 }

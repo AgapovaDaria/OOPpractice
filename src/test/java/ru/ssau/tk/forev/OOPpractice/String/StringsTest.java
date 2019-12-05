@@ -160,4 +160,10 @@ public class StringsTest {
         String[] secondString = new String[]{"Кто может", "делает", "кто не может", "подвергает критике того", "кто может."};
         assertEquals(Strings.unionInRow(secondString), "Кто может, делает, кто не может, подвергает критике того, кто может.");
     }
+
+    @Test
+    public void testReplaceEveryEvenCharacterAndFlipString() {
+        assertEquals(Strings.replaceEveryEvenCharacterAndFlipString("добрый"), "й4р2о0");
+        assertEquals(Strings.replaceEveryEvenCharacterAndFlipString("мягкий"), "й4к2я0");
+    }
 }
