@@ -139,4 +139,13 @@ public class Strings {
         }
         return builder.reverse().toString();
     }
+
+    public static String printStringOfNumbers(int number) {
+        StringBuilder builder = new StringBuilder();
+        builder.append(0);
+        for (int i = 1; i < number; i++) {
+            builder.append(" ").append(i);
+        }
+        return builder.toString();
+    }
 }

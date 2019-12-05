@@ -166,4 +166,12 @@ public class StringsTest {
         assertEquals(Strings.replaceEveryEvenCharacterAndFlipString("добрый"), "й4р2о0");
         assertEquals(Strings.replaceEveryEvenCharacterAndFlipString("мягкий"), "й4к2я0");
     }
+
+    @Test
+    public void testPrintStringOfNumbers() {
+        assertEquals(Strings.printStringOfNumbers(5), "0 1 2 3 4");
+        assertEquals(Strings.printStringOfNumbers(2), "0 1");
+        String string = Strings.printStringOfNumbers(10000);
+        System.out.println(string);
+    }
 }
