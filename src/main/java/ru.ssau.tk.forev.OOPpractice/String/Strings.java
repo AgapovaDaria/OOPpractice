@@ -1,5 +1,7 @@
 package ru.ssau.tk.forev.OOPpractice.String;
 
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.Objects;
 
 public class Strings {
@@ -147,5 +149,10 @@ public class Strings {
             builder.append(" ").append(i);
         }
         return builder.toString();
+    }
+
+    static String printValueEncoding(String string) {
+        byte[] newString = string.getBytes(Charset.defaultCharset());
+        return new String(newString, StandardCharsets.UTF_16);
     }
 }

@@ -174,4 +174,10 @@ public class StringsTest {
         String string = Strings.printStringOfNumbers(10000);
         System.out.println(string);
     }
+
+    @Test
+    public void testPrintValueEncoding() {
+        System.out.println(Strings.printValueEncoding("В жизни, как под дождем – однажды наступает момент, когда уже просто всё равно"));
+        //킒⃐뛐룐럐뷐렬⃐뫐냐먠킿킾킴⃐듐뻐뛐듐뗐밠錠킾킴킽킰킶킴톋⃐뷐냑臑苑菐뿐냐뗑舠킼킾킼킵킽톂Ⱐ킺킾킳킴킰⃑菐뛐딠킿톀킾톁톂킾⃐닑臑鄠톀킰킲킽킾
+    }
 }
