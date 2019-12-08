@@ -151,8 +151,13 @@ public class Strings {
         return builder.toString();
     }
 
-    static String printValueEncoding(String string) {
+    public static String printValueEncoding(String string) {
         byte[] newString = string.getBytes(Charset.defaultCharset());
         return new String(newString, StandardCharsets.UTF_16);
+    }
+
+    public static String replaceEncoding(String string, Charset firstCharset, Charset secondCharset) {
+        byte[] bytes = string.getBytes(firstCharset);
+        return new String(bytes, secondCharset);
     }
 }

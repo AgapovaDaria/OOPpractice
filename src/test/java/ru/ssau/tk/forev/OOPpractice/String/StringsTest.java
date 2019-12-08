@@ -3,11 +3,14 @@ package ru.ssau.tk.forev.OOPpractice.String;
 import static org.testng.Assert.*;
 import static ru.ssau.tk.forev.OOPpractice.String.Strings.printsStringInputObjectToConsole;
 
+import javafx.stage.Stage;
 import org.testng.annotations.Test;
 import ru.ssau.tk.forev.OOPpractice.Matrix_2_31.Matrix;
 import ru.ssau.tk.forev.OOPpractice.Person.Person;
 import ru.ssau.tk.forev.OOPpractice.Points.NamedPoint;
 import ru.ssau.tk.forev.OOPpractice.Points.Point;
+
+import java.nio.charset.StandardCharsets;
 
 public class StringsTest {
 
@@ -179,5 +182,12 @@ public class StringsTest {
     public void testPrintValueEncoding() {
         System.out.println(Strings.printValueEncoding("В жизни, как под дождем – однажды наступает момент, когда уже просто всё равно"));
         //킒⃐뛐룐럐뷐렬⃐뫐냐먠킿킾킴⃐듐뻐뛐듐뗐밠錠킾킴킽킰킶킴톋⃐뷐냑臑苑菐뿐냐뗑舠킼킾킼킵킽톂Ⱐ킺킾킳킴킰⃑菐뛐딠킿톀킾톁톂킾⃐닑臑鄠톀킰킲킽킾
+    }
+
+    @Test
+    public void testReplaceEncoding() {
+        String stringOne = "Жизнь";
+        String array = Strings.replaceEncoding(stringOne, StandardCharsets.UTF_16LE, StandardCharsets.ISO_8859_1);
+        System.out.println("Входная строка с первой кодировкой: " + stringOne + "\n" + "Строка после замены кодировки: " + array); //Входная строка с первой кодировкой: Жизнь Строка после замены кодировки: 87=L
     }
 }
